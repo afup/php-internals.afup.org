@@ -2,7 +2,7 @@ title: "PHP Internals en français"
 description: >- # this means to ignore newlines until "baseurl:"
   Suivi des discussions de PHP Internals en Français
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://php-internals.afup.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: afup
 
 # Build settings
@@ -22,3 +22,6 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+feed:
+  path: feed

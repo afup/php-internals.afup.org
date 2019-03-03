@@ -8,4 +8,4 @@ services:
     volumes:
       - ./:/srv/jekyll
     working_dir: /srv/jekyll
-    command: jekyll serve
+    command: jekyll serve --config _config.yml,_config_dev.yml
