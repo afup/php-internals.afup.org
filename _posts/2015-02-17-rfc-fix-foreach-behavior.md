@@ -1,6 +1,6 @@
 ---
 id: 140
-title: 'RFC: Fix &laquo;&nbsp;foreach&nbsp;&raquo; behavior'
+title: 'RFC: Fix "foreach" behavior'
 date: 2015-02-17T08:30:46+00:00
 author: Jean Molliné
 layout: post
@@ -9,7 +9,7 @@ permalink: /2015/02/17/rfc-fix-foreach-behavior/
 categories:
   - Non classé
 ---
-Voici une RFC à propos de la construction de boucle `foreach` : Fix &laquo;&nbsp;foreach&nbsp;&raquo; behavior
+Voici une RFC à propos de la construction de boucle `foreach` : Fix "foreach" behavior
 
   * URL : <https://wiki.php.net/rfc/php7_foreach>
   * Version cible : PHP 7

@@ -1,6 +1,6 @@
 ---
 id: 18
-title: 'RFC: Interdire l&rsquo;usage de plusieurs &lsquo;default&rsquo; dans un &lsquo;switch&rsquo;'
+title: "RFC: Interdire l'usage de plusieurs 'default' dans un 'switch'"
 date: 2014-10-06T06:35:11+00:00
 author: Pascal MARTIN
 layout: post

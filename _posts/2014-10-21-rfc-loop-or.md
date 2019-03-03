@@ -1,6 +1,6 @@
 ---
 id: 35
-title: 'RFC: Loop&#8230; or'
+title: 'RFC: Loop... or'
 date: 2014-10-21T07:05:07+00:00
 author: Pascal MARTIN
 layout: post

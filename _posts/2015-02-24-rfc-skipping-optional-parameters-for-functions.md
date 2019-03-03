@@ -19,7 +19,7 @@ Aujourd&rsquo;hui, lorsque l&rsquo;on souhaite appeler une fonction qui accepte 
 Par exemple, considérons une fonction définie ainsi :
 
 {% highlight php %}
-    function ma_fonction($premier, $second = &#034;world&#034;, $troisieme = false) {
+    function ma_fonction($premier, $second = "world", $troisieme = false) {
         // la la la
     }
 {% endhighlight %}
@@ -27,7 +27,7 @@ Par exemple, considérons une fonction définie ainsi :
 Pour appeler cette fonction en passant `true` en dernier paramètre, en conservant la valeur par défaut pour le second, nous devons écrire ceci :
 
 {% highlight php %}
-    ma_fonction(&#034;Hello&#034;, &#034;world&#034;, true);
+    ma_fonction("Hello", "world", true);
 {% endhighlight %}
 
 Nous devons ainsi, lors de l&rsquo;appel, passer la valeur `"world"` en second paramètre, alors que ce que nous voulions réellement faire était passer la valeur par défaut.
@@ -37,7 +37,7 @@ Cette RFC vise à répondre à cette problématique en permettant l&rsquo;usage 
 L&rsquo;exemple d&rsquo;appel reproduit plus haut deviendrait donc :
 
 {% highlight php %}
-    ma_fonction(&#034;Hello&#034;, default, true);
+    ma_fonction("Hello", default, true);
 {% endhighlight %}
 
 Les votes pour cette RFC ont été ouverts le 08 février 2015 et clôturés le 21 février 2015.  

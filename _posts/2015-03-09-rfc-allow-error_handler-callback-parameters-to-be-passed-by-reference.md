@@ -14,17 +14,17 @@ La [RFC: Allow error_handler callback parameters to be passed by reference](htt
 L&rsquo;objectif était de pouvoir y passer des informations contextuelles de type identifiant stocké en session, URL parcourue lors de l&rsquo;erreur, etc. de la manière suivante:
 
 {% highlight php %}
-    $_SESSION[&#039;username&#039;] = &#039;john&#039;;
+    $_SESSION['username'] = 'john';
      
     function myErrorHandler($errno, &$errstr, $errfile, $errline)
     {
-      if (isset($_SESSION[&#039;username&#039;])) {
-        $errstr .= &#039;, username: &#039;.$_SESSION[&#039;username&#039;];
+      if (isset($_SESSION['username'])) {
+        $errstr .= ', username: '.$_SESSION['username'];
       }
       return false; // continue normal error handler
     }
      
-    set_error_handler(&#039;myErrorHandler&#039;);
+    set_error_handler('myErrorHandler');
 {% endhighlight %}
 
 La RFC n&rsquo;a pas convaincu et nos avis furent tous négatifs, principalement dû au fait que cette gestion pouvait être très facilement déléguée à la fonction utilisateur sans forcément avoir recours à des paramètres passés par référence. Nous avons donc posté en ce sens sur [internals@](http://news.php.net/php.internals/84028).

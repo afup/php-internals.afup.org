@@ -22,7 +22,7 @@ En cas d&rsquo;échec, la condition spécifiée en premier paramètre de `assert
 L&rsquo;activation ou non des assertions serait paramétrée par le biais d&rsquo;une directive `.ini` nommée `zend.assertions`, qui pourrait valoir :
 
   * `1` : pour générer et exécuter le code correspondant aux assertions : c&rsquo;est la valeur qui sera généralement utilisée en environnement de développement
-  * `` : pour générer le code mais ne pas l&rsquo;exécuter
+  * `0` : pour générer le code mais ne pas l&rsquo;exécuter
   * `-1` : pour ne pas du tout générer le code de l&rsquo;assertion (coût nul, à utiliser en production)
 
 L&rsquo;API proposée par cette RFC est globalement compatible avec celle actuellement en place pour la fonction `assert()` existante : il s&rsquo;agit surtout d&rsquo;améliorer celle-ci, notamment en supprimant complétement la génération et l&rsquo;exécution du code de l&rsquo;assertion en mode &laquo;&nbsp;production&nbsp;&raquo;.

@@ -11,10 +11,10 @@ categories:
 ---
 La RFC [Integer Semantics](https://wiki.php.net/rfc/integer_semantics) visait à améliorer la cohérence de PHP entre plate-formes différentes, en implémentant les changements suivants :
 
-  * `NaN` et `Infinity` seraient toujours égaux à `` lorsque transtypés en entiers,
+  * `NaN` et `Infinity` seraient toujours égaux à `0` lorsque transtypés en entiers,
   * les décalages bit-à-bit d&rsquo;un nombre négatif de bits seraient interdits,
-  * le décalage bit-à-bit vers la gauche d&rsquo;un nombre de bits supérieur à la taille d&rsquo;un entier donnerait toujours ``,
-  * et le décalage bit-à-bit vers la droite d&rsquo;un nombre de bits supérieur à la taille d&rsquo;un entier donnerait toujours `` ou `-1` (en fonction du signe)
+  * le décalage bit-à-bit vers la gauche d&rsquo;un nombre de bits supérieur à la taille d&rsquo;un entier donnerait toujours `0`,
+  * et le décalage bit-à-bit vers la droite d&rsquo;un nombre de bits supérieur à la taille d&rsquo;un entier donnerait toujours `0` ou `-1` (en fonction du signe)
 
 En effet, aujourd&rsquo;hui, une partie de ces manipulations a un comportement qui dépend de l&rsquo;architecture et de la plate-forme sur laquelle tourne PHP.
 

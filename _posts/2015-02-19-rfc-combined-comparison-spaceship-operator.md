@@ -16,7 +16,7 @@ Voici un autre sujet qui avait été discuté il y a quelques temps et qui est r
 
 Cette RFC proposait d&rsquo;ajouter un nouvel opérateur `<=>` de comparaison combinée &#8212; opérateur fréquemment appelé _spaceship operator_, de par sa forme. Cet opérateur, sur le modèle déjà utilisé pour des fonctions de comparaison comme `strcmp()`, retournerait trois valeurs :
 
-  * `` si les deux opérandes sont égaux,
+  * `0` si les deux opérandes sont égaux,
   * `1` si l&rsquo;opérande de gauche est plus grand que celui de droite
   * `-1` si l&rsquo;opérande de gauche est plus petit que celui de droite.
 
