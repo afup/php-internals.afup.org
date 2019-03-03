@@ -18,21 +18,17 @@ Pour résumer, cette RFC partait du constat qu&rsquo;écrire de multiples utilis
 
 Par exemple, la portion de code suivante :
 
-[pastacode lang=&nbsp;&raquo;php&nbsp;&raquo; message=&nbsp;&raquo;&nbsp;&raquo; highlight=&nbsp;&raquo;&nbsp;&raquo; provider=&nbsp;&raquo;manual&nbsp;&raquo;]
-
+{% highlight php %}
     use Doctrine\Common\Collections\Expr\Comparison;
     use Doctrine\Common\Collections\Expr\Value;
     use Doctrine\Common\Collections\Expr\CompositeExpression;
-
-[/pastacode]
+{% endhighlight %}
 
 Pourrait être ré-écrite de la manière suivante :
 
-[pastacode lang=&nbsp;&raquo;php&nbsp;&raquo; message=&nbsp;&raquo;&nbsp;&raquo; highlight=&nbsp;&raquo;&nbsp;&raquo; provider=&nbsp;&raquo;manual&nbsp;&raquo;]
-
+{% highlight php %}
     use Doctrine\Common\Collections\Expr\{ Comparison, Value, CompositeExpression };
-
-[/pastacode]
+{% endhighlight %}
 
 La RFC présente d&rsquo;autres cas d&rsquo;exemples, avec des &laquo;&nbsp;`use ... as ...`&laquo;&nbsp;, des `use function` ou `const` et montre que la syntaxe n&rsquo;est pas limitée au dernier niveau de chaque espace de noms. Elle répond également à certains retours &laquo;&nbsp;communs&nbsp;&raquo; sur la proposition et sa syntaxe.
 

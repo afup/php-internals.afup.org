@@ -13,8 +13,7 @@ La [RFC: Context Sensitive Lexer](https://wiki.php.net/rfc/context_sensitive_le
 
 Elle proposait donc de modifier l&rsquo;analyse du code PHP afin de disposer d&rsquo;une analyse lexicale sensible au contexte, permettant l&rsquo;utilisation de mots clefs ; en se limitant pour l&rsquo;instant au périmètre de la programmation objet :
 
-[pastacode lang=&nbsp;&raquo;php&nbsp;&raquo; message=&nbsp;&raquo;&nbsp;&raquo; highlight=&nbsp;&raquo;&nbsp;&raquo; provider=&nbsp;&raquo;manual&nbsp;&raquo;]
-
+{% highlight php %}
     // Le code suivant devient possible:
     interface Collection
     {
@@ -25,8 +24,7 @@ Elle proposait donc de modifier l&rsquo;analyse du code PHP afin de disposer d&r
     
     // Mais pas le suivant:
     function list() {/* */}
-
-[/pastacode]
+{% endhighlight %}
 
 De plus, cette RFC permettrait également de limiter les problèmes de rétro-compatibilité à l&rsquo;avenir, lorsque PHP réservera de nouveaux mots clefs.
 

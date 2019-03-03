@@ -11,11 +11,9 @@ categories:
 ---
 [Cette RFC](https://wiki.php.net/rfc/unicode_escape) proposait de permettre l&rsquo;utilisation de séquences Unicode dans les chaînes de caractères (à double-guillemets et heredoc) de PHP.
 
-[pastacode lang=&nbsp;&raquo;php&nbsp;&raquo; message=&nbsp;&raquo;Exemple&nbsp;&raquo; highlight=&nbsp;&raquo;&nbsp;&raquo; provider=&nbsp;&raquo;manual&nbsp;&raquo;]
-
+[{% highlight php %}
     $str = &#034;Un caractère unicode : \u{1F602}&#034;;
-
-[/pastacode]
+{% endhighlight %}
 
 La RFC proposait d&rsquo;autres exemples et expliquait pourquoi il avait été choisi de positionner `{` et `}` autour du code du caractère : lisibilité et pas de limite en dur au nombre de caractères attendus pour spécifier le code.
 

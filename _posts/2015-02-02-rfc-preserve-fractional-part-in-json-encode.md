@@ -13,20 +13,17 @@ categories:
 
 Elle partait en effet du constat que `json_encode()` encode le flottant `10.0` (côté PHP) vers l&rsquo;entier `10` (côté JSON). L&rsquo;opération inverse JSON → PHP donnait donc l&rsquo;entier `10` (côté PHP) &#8212; et, donc, encoder puis décoder une donnée ne menait pas à la même information que celle de départ.
 
-[pastacode lang=&nbsp;&raquo;php&nbsp;&raquo; message=&nbsp;&raquo;&nbsp;&raquo; highlight=&nbsp;&raquo;&nbsp;&raquo; provider=&nbsp;&raquo;manual&nbsp;&raquo;]
-
+{% highlight php %}
     // Actuellement
     echo json_encode(10.0); // Affiche 10
     echo json_encode(10.1); // Affiche 10.1
     var_dump(json_decode(json_encode(10.0))); // Affiche int(10)
     var_dump(10.0 === json_decode(json_encode(10.0))); // Affiche bool(false)
-
-[/pastacode]
+{% endhighlight %}
 
 Par conséquent, il était proposé d&rsquo;ajouter un nouveau flag `JSON_PRESERVE_FRACTIONAL_PART` qui entraînerait la conservation de cette information.
 
-[pastacode lang=&nbsp;&raquo;php&nbsp;&raquo; message=&nbsp;&raquo;&nbsp;&raquo; highlight=&nbsp;&raquo;&nbsp;&raquo; provider=&nbsp;&raquo;manual&nbsp;&raquo;]
-
+{% highlight php %}
     // Proposé
     echo json_encode(10.0); // Affiche 10
     echo json_encode(10.1); // Affiche 10.1
@@ -34,8 +31,7 @@ Par conséquent, il était proposé d&rsquo;ajouter un nouveau flag `JSON_PRESER
     echo json_encode(10.1, JSON_PRESERVE_ZERO_FRACTION); // Affiche 10.1
     var_dump(json_decode(json_encode(10.0, JSON_PRESERVE_ZERO_FRACTION))); // Affiche double(10)
     var_dump(10.0 === json_decode(json_encode(10.0, JSON_PRESERVE_ZERO_FRACTION))); // Affiche bool(true)
-
-[/pastacode]
+{% endhighlight %}
 
 ## Note
 

@@ -26,14 +26,12 @@ Toute [une série d&rsquo;exemples est donnée dans la RFC](https://wiki.php.net
 
 Voici cependant un exemple basique :
 
-[pastacode lang=&nbsp;&raquo;php&nbsp;&raquo; message=&nbsp;&raquo;&nbsp;&raquo; highlight=&nbsp;&raquo;&nbsp;&raquo; provider=&nbsp;&raquo;manual&nbsp;&raquo;]
-
+{% highlight php %}
     // Integers
     echo 1 <=> 1; // 0
     echo 1 <=> 2; // -1
     echo 2 <=> 1; // 1
-
-[/pastacode]
+{% endhighlight %}
 
 Les votes ont été ouverts le 02 février 2015 pour être clôturés le 16 février 2015 et [nous avons exprimé notre avis positif sur `internals@`](http://news.php.net/php.internals/82758).  
 Cette proposition a été acceptée avec 43 votes _pour_ et 11 votes _contre_.

@@ -17,13 +17,11 @@ Pour cela, une nouvelle méthode magique (qui pourrait être nommée `__hash()` 
 
 Par exemple, il deviendrait possible d&rsquo;écrire quelque chose de ce type :
 
-[pastacode lang=&nbsp;&raquo;php&nbsp;&raquo; message=&nbsp;&raquo;Exemple&nbsp;&raquo; highlight=&nbsp;&raquo;&nbsp;&raquo; provider=&nbsp;&raquo;manual&nbsp;&raquo;]
-
+{% highlight php %}
     $obj = new MaClasse(); // implémentant une méthode __hash()
     $arr = [];
     $arr[$obj] = /* ici, quelque chose stocké dans le tableau, à l&#039;index $obj->hash() */
-
-[/pastacode]
+{% endhighlight %}
 
   * URL  :  <https://wiki.php.net/rfc/objkey>
   * Version cible : PHP 7

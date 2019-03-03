@@ -11,15 +11,13 @@ categories:
 ---
 La [RFC: Remove PHP 4 Constructors](https://wiki.php.net/rfc/remove_php4_constructors), comme son nom l&rsquo;indique, visait à supprimer les constructeurs introduits dans la version 4 de PHP, où la méthode de construction des objets était appelée comme la classe elle-même :
 
-[pastacode lang=&nbsp;&raquo;php&nbsp;&raquo; message=&nbsp;&raquo;&nbsp;&raquo; highlight=&nbsp;&raquo;&nbsp;&raquo; provider=&nbsp;&raquo;manual&nbsp;&raquo;]
-
+{% highlight php %}
     class Filter
     {
         // Constructor as introduced in PHP 4
         function filter() {}
     }
-
-[/pastacode]
+{% endhighlight %}
 
 Ce comportement, qui induit souvent en erreur les développeurs, est depuis longtemps vu par beaucoup comme indésirable. Néanmoins, sa suppression visant (initialement) la version 7 de PHP fut génératrice d&rsquo;interrogations, notamment à cause de son utilisation récurrente dans les extensions PEAR ou même sur WordPress.
 

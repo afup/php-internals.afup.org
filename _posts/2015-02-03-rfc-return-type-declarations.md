@@ -16,13 +16,11 @@ Pour faire simple : cette RFC proposait de mettre en place la possibilité de sp
 
 Avec la syntaxe proposée, il deviendrait possible de déclarer, par exemple, qu&rsquo;une fonction retourne toujours un tableau :
 
-[pastacode lang=&nbsp;&raquo;php&nbsp;&raquo; message=&nbsp;&raquo;&nbsp;&raquo; highlight=&nbsp;&raquo;&nbsp;&raquo; provider=&nbsp;&raquo;manual&nbsp;&raquo;]
-
+{% highlight php %}
     function foo(): array {
         return [];
     }
-
-[/pastacode]
+{% endhighlight %}
 
 Bien entendu, cette fonctionnalité est également branchée dans l&rsquo;API de `Reflection`.
 

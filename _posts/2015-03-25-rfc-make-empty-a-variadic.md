@@ -17,8 +17,7 @@ Voici une courte RFC autour de la construction `empty()` :
 
 Cette RFC partait de l&rsquo;idée qu&rsquo;il est commun de vouloir utiliser `empty()` sur plusieurs variables, en vue de déterminer si l&rsquo;une d&rsquo;entre elles est vide ou si aucune ne l&rsquo;est ; ce qui passe actuellement par une portion de code de ce type :
 
-[pastacode lang=&nbsp;&raquo;php&nbsp;&raquo; message=&nbsp;&raquo;&nbsp;&raquo; highlight=&nbsp;&raquo;&nbsp;&raquo; provider=&nbsp;&raquo;manual&nbsp;&raquo;]
-
+{% highlight php %}
     if (empty($a) || empty($b) || empty($c)) {
         // Une des variable est vide
     }
@@ -26,13 +25,11 @@ Cette RFC partait de l&rsquo;idée qu&rsquo;il est commun de vouloir utiliser `e
     if (!empty($a) && !empty($b) && !empty($c)) {
         // Aucune variable vide
     }
-
-[/pastacode]
+{% endhighlight %}
 
 Pour simplifier l&rsquo;écriture de ce type de test, cette RFC proposait de rendre `empty()` variadique (comme l&rsquo;est déjà `isset()`), ce qui permettrait d&rsquo;utiliser l&rsquo;écriture suivante :
 
-[pastacode lang=&nbsp;&raquo;php&nbsp;&raquo; message=&nbsp;&raquo;&nbsp;&raquo; highlight=&nbsp;&raquo;&nbsp;&raquo; provider=&nbsp;&raquo;manual&nbsp;&raquo;]
-
+{% highlight php %}
     if (empty($a, $b, $c)) {
         // Une des variable est vide
     }
@@ -40,8 +37,7 @@ Pour simplifier l&rsquo;écriture de ce type de test, cette RFC proposait de ren
     if (!empty($a, $b, $c)) {
         // Aucune variable vide
     }
-
-[/pastacode]
+{% endhighlight %}
 
 Passer plusieurs expressions à `empty()` reviendrait à effectuer un OR entre `empty()` de chaque expression.
 
